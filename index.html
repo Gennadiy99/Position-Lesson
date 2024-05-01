@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5.3 Позиционирование, Разм и Блоч.мод</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>5.3 Позиционирование, Размеры и Блочная модель</h2>
+      <p>
+        <b><u>В этом уроке мы рассмотрим следующие темы:</u></b>
+      </p>
+
+      <h3>1. Размеры элементов на CSS</h3>
+
+      <p>
+        Расскажу вам про свойство <b>width и height</b> для настройки ширины и
+        высоты элемента. Будем менять свойства
+        <u>max-width, max-height, min-width, min-height, width, height.</u>
+      </p>
+
+      <h3>2. Что такое box-sizing: border-box на CSS</h3>
+
+      <p>Зачем нужно свойство box-sizing и в каких случаях его использовать.</p>
+
+      <p><a href="#" target="_blank">Скачать код:</a></p>
+
+      <h3>3. Позиционирование на CSS</h3>
+
+      <p>
+        Я покажу вам как правильно позиционировать элементы на CSS. Рассмотрим
+        такие значения свойства position, как absolute, relative, fixed, sticky
+        и static.
+      </p>
+
+      <p><a href="" target="_blank">Скачать код</a></p>
+
+      <p><b>Рекомендую почитать следующие статьи:</b></p>
+
+      <p>
+        <a href="http://css.yoksel.ru/size-units/" target="_blank"
+          >Единицы размеров в CSS</a
+        >
+      </p>
+      <p>
+        <a href="https://metanit.com/web/html5/6.13.php" target="_blank"
+          >Размеры элементов</a
+        >
+      </p>
+      <p>
+        <a
+          href="https://developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS"
+          target="_blank"
+          >Изменение размеров в CSS</a
+        >
+      </p>
+      <p>
+        <a href="https://html5book.ru/block-inline-elements/" target="_blank"
+          >Блочные и строчные элементы</a
+        >
+      </p>
+      <p><a href="#" target="_blank">В них вы узнаете много полезного!</a></p>
+
+      <p>
+        <b><i>Материал Урока</i></b>
+      </p>
+      <p>
+        <b><u>Ширина и высота элемента</u></b>
+      </p>
+      <ul>
+        <li>width: 200px - Устанавливает ширину</li>
+        <li>hight: 150px - Устанавливает высоту</li>
+      </ul>
+      <p>Если текс не помещается в парагрф мы може применить свойство:</p>
+      <ul>
+        <li>overflow: auto;</li>
+      </ul>
+      <p><u>И появится "скрол для прокрутки </u>"</p>
+      <p class="p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+        delectus laudantium, et ratione at eligendi, ullam, nobis quasi beatae
+        minus laboriosam! Repellat totam pariatur perferendis debitis incidunt
+        nihil laudantium amet aperiam sed neque porro facere, recusandae illo
+        exercitationem aliquid maiores?
+      </p>
+      <p>
+        <b><u>Можно использовать:</u></b>
+        <u>Маскимальную-Ширина и Максимальную-высота</u> элемента
+      </p>
+      <ul>
+        <li>max-width: 200px - Устанавливает макс.ширину</li>
+        <li>max-hight: 150px - Устанавливает макс.высоту</li>
+      </ul>
+
+      <p>
+        При установке <u>max-hight: 150px</u> максимальная <u>высота</u> будет
+        150px но элемент <u>может быть и меньше 100px</u> (если текста будет
+        меньше)
+      </p>
+      <p>
+        При установке свойства элементу "<b>display: inline-block;</b>" И
+        <u>уменьшения текста в элементе</u>, Элемент становится меньше по
+        ширине, <u>уменьшаясь</u> с 200px на <u>100px или 50px</u>
+      </p>
+      <p
+        class="pMax"
+        title="Применено свойство: max-width: 200px и display: inline-block По этому Элемент уменьшился по содержимому "
+      >
+        Lorem ipsum
+      </p>
+
+      <p>
+        Свойство <b>"max-width: 200px"</b> <b>работает</b> при свойстве блока
+        <b>"display: inline-block;"</b>
+        <u
+          >При блочном отображении блока "display: block;" не работает, так как
+          занимает всю ширину</u
+        >
+      </p>
+      <p>
+        <b>Можно комбинировать свойство width:</b>
+      </p>
+      <p>Указав для элемента</p>
+      <ul>
+        <li><b>"max-width: 600px</b> - Максимальная ширина блока.</li>
+        <li>
+          <b>"width: 100%"</b> - Ширина блока если ширина меньше <b>600px</b>
+        </li>
+        <li><b>"display: block;"</b>- Отображение блока на всю ширину</li>
+        <li>
+          <b>"margin: 0 auto;"</b>- Для расположения блока по центру документа
+        </li>
+      </ul>
+      <p>
+        На практике все адаптивно работает и без установки свойства:
+        <b>"width: 100%"</b>
+      </p>
+
+      <p class="pCombi">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus
+        quibusdam molestiae est odio dolores, voluptas delectus ducimus veniam
+        eos ipsam odit ipsa iusto vero repudiandae doloremque quo ipsum itaque
+        mollitia, similique quod, commodi deserunt beatae! Voluptatum inventore
+        officia ipsa? Necessitatibus est libero corrupti quas quo consectetur
+        quae repellendus doloribus doloremque ipsa odit ad impedit dignissimos
+        unde, asperiores esse quam repellat earum totam veniam at voluptas!
+        Laudantium vero quidem minus omnis saepe necessitatibus blanditiis
+        repudiandae tempora suscipit. Sint esse recusandae fugit soluta mollitia
+        quos beatae delectus, maiores assumenda. Voluptatem distinctio
+        voluptates reprehenderit eaque recusandae tempora atque nulla qui quidem
+        cumque laudantium molestias corporis nobis asperiores, quod et accusamus
+        pariatur error! Quia dolore unde odit quos architecto illo placeat dolor
+        tempora! Accusantium.
+      </p>
+      <p>
+        <b>Можно использовать:</b>
+        <u>Минимальную-Ширина и Минимальную-высота</u> элемента
+      </p>
+
+      <ul class="pMin">
+        <b>Элемент с свойствами:</b>
+        <li>min-width: 200px;</li>
+        <li>min-height: 150px;</li>
+        <li>background: #a57373;</li>
+        <li>display: inline-block;</li>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque velit
+        iste repellat deleniti perferendis illum aspernatur labore accusantium
+        dolorum earum.
+      </ul>
+      <ul class="pMin">
+        <b>Элемент с свойствами:</b>
+        <li>min-width: 200px;</li>
+        <li>min-height: 150px;</li>
+        <li>background: #a57373;</li>
+      </ul>
+      <ul class="pMin">
+        <b>Элемент с темеже свойств</b>
+      </ul>
+      <ul class="pMin">
+        <b>Тотже Элемент</b>
+      </ul>
+      <p>
+        На примере выше видно, что элемент минимум занимает Высоту: 150px
+        Ширину: 200px, даже если контента очень мало или Его нет!
+      </p>
+      <p>
+        <b
+          >Можно комбинировать свойство <u>"min-width:"</u> и
+          <u>"max-width"</u></b
+        >
+      </p>
+      <ul class="pMin_Max">
+        <li>min-width: 200px;</li>
+        <li>max-width: 400px;</li>
+        <li>min-height: 150px;</li>
+        <li>max-height: 300px;</li>
+        <li>background: #305f5b;</li>
+      </ul>
+      <p class="pMin_Max">lorem</p>
+      <p class="pMin_Max">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos iusto
+        laboriosam alias tempore voluptatibus dolor eligendi earum modi. Cumque
+        quidem nesciunt dignissimos voluptatem corrupti, quibusdam ratione non
+        perferendis earum sint, quos possimus quisquam, ut in! Tempora
+        blanditiis maiores optio? Suscipit, sint atque laboriosam excepturi vero
+        labore temporibus consectetur accusamus praesentium cum, molestiae quo
+        est veniam corporis cumque veritatis delectus minima. Perferendis unde
+        deserunt velit iusto. Minus totam itaque quos quis magnam, voluptates,
+        commodi excepturi velit esse error pariatur expedita iste dolorum id
+        libero saepe! Culpa et debitis ipsum! Temporibus dolor blanditiis
+        suscipit earum? Numquam repudiandae dignissimos voluptatibus maxime non
+        voluptas quos ab aliquid sit! Doloribus rem tenetur exercitationem
+        veritatis, nobis quaerat nihil eaque, hic unde amet, nulla non quas ad
+        quibusdam quasi suscipit. Autem, nisi labore, molestiae inventore in
+        eaque est ipsam suscipit pariatur esse voluptatum quis id debitis
+        nostrum.
+      </p>
+      <h3>Свойство "box-sizing"</h3>
+      <ul>
+        <li>
+          <b>content-box</b> - На размер элемента влияет контент + padding +
+          border
+        </li>
+        <li>
+          <b>box-sizing</b> - В размер документа уже входит padding + border.
+          Его размер не изменный!
+        </li>
+      </ul>
+      <h3>Позиционирование элементов в CSS</h3>
+      <p>
+        Чтобы можно было управлять позиционированием нужно, что бы элементу был
+        установлено один из типов позиционирования:
+      </p>
+
+      <ol>
+        <li>
+          <b>"position: statick;"</b> - <u>Значение по умолчанию,</u> в Левом
+          верхнем углу его родителя. Можно устанавливать если оно было изменено.
+          При этом типе нет возможности установить свойства:
+          <u>top; left; right; bottom</u>
+        </li>
+        <li>
+          <b>"position: relative;"</b> - Относительное позиционирование (<b
+            >Элем.находится в потоке документа</b
+          >), при котором можно перемещать элемент,- используюя свойства
+          относительно его текущего места положения:
+          <ul>
+            <li><b>top: 15px:</b> - Перемещает элем от верха.</li>
+            <li><b>left: 15px;</b> - Перемещает элем с лева.</li>
+            <li><b>right: 15px;</b> - Перемещает элем с права.</li>
+            <li><b>bottom: 15px;</b> - Перемещает элем с низу.</li>
+            <li>
+              <b>z-index: 3;</b> - Перемещает элем по оси "Z"(<b
+                >передни / задний план</b
+              >)
+            </li>
+            Одновременно
+            <u>left: 15px</u
+            >;
+            <u>right: 15px</u
+            >; чаще всего не работают. Нужно выбирать одно значение на одной
+            оси.
+            <p>
+              "position: relative;" - самостоятельно используют очень редко.
+            </p>
+            <p>
+              Чаще - добавляют родительскому элементу, что бы в дочернем через
+              тип: "position absolute" комортно управлять дочерним элементом.
+            </p>
+            "position: relative;"
+          </ul>
+        </li>
+        <p>
+          <i>
+            <b>
+              Всвойстве можно устанавливать любую единицу измерения
+              поьдерживаемую CSS
+            </b>
+          </i>
+        </p>
+
+        <li>
+          <b>"position absolute"</b> - <u>Элемент выпадает из потока</u> и
+          позиционируется относительно всего документа. Или позиционируется
+          относительно родительского документа
+          <u>если в нем указано свойсво,</u>-
+          <b><i>"position: relative;"</i></b>
+        </li>
+        <li>
+          <b>"position fixed"</b> - <u>Элемент фиксируется на одном месте</u> и
+          при "скроле" не меняет своегом местаположения.
+          <p>
+            При позицианирвании <b>"fixed"</b> элемента можно применить
+            одновременно, свойства:
+          </p>
+          <ul>
+            <li><b>left: 0;</b></li>
+            <li>top: 0;</li>
+            <li><b>right: 0;</b></li>
+            При этом элемент "<u> div "Список" растянется на весь экран"</u>
+          </ul>
+        </li>
+        <i>
+          <b>
+            Очень интересный способ выравнимания блока с меню. Для этого
+            устанавливаем элементу такие свойства:
+          </b>
+        </i>
+        <ul>
+          <li><b>position: fixed;</b></li>
+          <li><b>left: 0;</b></li>
+          <li><b>top: 0;</b></li>
+          <li><b>right: 0;</b></li>
+          При этом блок растянется на всю ширину экрана, а список "Меню" станет
+          по середине, так как,- Список имеет свойство:
+          <ul>
+            <li><b>display: flax;</b></li>
+            <li><b>justify-content: centr;</b></li>
+          </ul>
+        </ul>
+        <i>
+          <b>
+            Второй способ выравнимания блока по центру с меню,
+            <u>если у него установленна ширина (width: 400px;)</u> Для этого
+            устанавливаем элементу такие свойства:
+          </b>
+        </i>
+        <ul>
+          <li><b>position: fixed;</b> - иксированное положение блока.</li>
+          <li><b>top: 0;</b> - с верху "0 px"</li>
+          <li><b>width: 400px;</b> - ширина блока.</li>
+          <li>
+            <b>left: 50%</b> - Отступ с лева на 50% относительно начального
+            положения.
+          </li>
+          <li><b>left: 50%</b></li>
+          <li>
+            <b>transform: translate(-50%);</b> - Двигает элемент относительно
+            самого себя (а не относ.своего.места полож.)
+          </li>
+        </ul>
+        <p>
+          Думаю его можно выравнять по середине, при позиционировании:<b
+            >position: fixed;</b
+          >
+          указав: <b>left: 33.3%;</b>
+        </p>
+        <li>
+          <b>"position: sticky;"</b> - Фиксирует элемент не сразу, а когда
+          проскролятся пердыдущие элементы до элемента с указанным
+          свойством:"position: sticky;" Также мы указываем в элементе с какого
+          положения начинает фиксироваться элемент, через свойство:
+          <ul>
+            <li><b>"top: 0;"</b></li>
+            или
+            <li><b>"top: 10px;"</b></li>
+          </ul>
+        </li>
+      </ol>
+      <p>
+        <i>Не вовсех браузерах потдерживается свойство: "position: sticky;"</i>
+      </p>
+      <p>
+        Для того что бы это свойство работало во всех браузерах нужно в CSS для
+        этого элемента прописать преиксы:
+      </p>
+      <ul>
+        .child{
+        <li>padding: 10px</li>
+        <li>position: -webkit-sticky</li>
+        <li>position: -moz-sticky</li>
+        <li>position: -ms-sticky</li>
+        <li>position: -0-sticky</li>
+        <li>position: sticky;</li>
+        <li>top: 0;</li>
+        }
+      </ul>
+      <p>
+        Так же мы можем <b>написать в CSS</b> другой код который будет
+        означать,-
+        <u> Если Браузер потдерживает это свойство то приминить его</u>:
+      </p>
+      <pre>
+        @supports (position: sticky){
+          .child{
+            position: sticky;
+            top: 0;
+          }
+        }
+      </pre>
+      <p>
+        <b><i>Проба позицианирование элем position:</i></b> sticky;
+      </p>
+      <div class="parent">
+        <div>
+          <!-- Обертка помогает дивам менять др.др без нахлеста. -->
+          <div class="child child-one">One</div>
+          <ul>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="child child-two">Two</div>
+          <ul>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="child child-three">Three</div>
+          <ul>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+        </div>
+      </div>
+      <h3>5.4 Методология БЭМ, Как называть классы в HTML</h3>
+      <p>
+        В этом уроке я познакомлю вас с методологией БЭМ и вы узнаете как лучше
+        называть элементы и классы на HTML.
+      </p>
+
+      <p>
+        В этом уроке я познакомлю вас с методологией БЭМ и вы узнаете как лучше
+        называть элементы и классы на HTML.
+      </p>
+      <p>
+        Методология БЭМ (Блок, Элемент, Модификатор) - создана компанией Яндекс.
+        В её основе лежит принцип разделения интерфейса на независимые блоки. Он
+        позволяет легко и быстро разрабатывать интерфейсы любой сложности и
+        повторно использовать существующий код.
+      </p>
+      <p>
+        Быстрый старт Полная документация Блок Функционально независимый
+        компонент страницы, который может быть повторно использован. В HTML
+        блоки представлены атрибутом class.
+      </p>
+      <p>
+        Особенности: Название блока характеризует смысл («что это?» — «меню»:
+        menu, «кнопка»: button), а не состояние («какой, как выглядит?» —
+        «красный»: red, «большой»: big). Блок не должен влиять на свое
+        окружение, т. е. блоку не следует задавать внешнюю геометрию (в виде
+        отступов, границ, влияющих на размеры) и позиционирование. В CSS по БЭМ
+        также не рекомендуется использовать селекторы по тегам или id. Блоки
+        можно вкладывать друг в друга. Допустима любая вложенность блоков. Таким
+        образом обеспечивается независимость, при которой возможно повторное
+        использование или перенос блоков с места на место.
+      </p>
+      <p>
+        Элемент Составная часть блока, которая не может использоваться в отрыве
+        от него. Особенности: Название элемента характеризует смысл («что это?»
+        — «пункт»: item, «текст»: text), а не состояние («какой, как выглядит?»
+        — «красный»: red, «большой»: big). Структура полного имени элемента
+        соответствует схеме: имя-блока__имя-элемента. Имя элемента отделяется от
+        имени блока двумя подчеркиваниями (__).
+      </p>
+      <p>
+        Вложенность Элементы можно вкладывать друг в друга. Допустима любая
+        вложенность элементов. Элемент — всегда часть блока, а не другого
+        элемента. Это означает, что в названии элементов нельзя прописывать
+        иерархию вида block__elem1__elem2 Принадлежность Элемент — всегда часть
+        блока и не должен использоваться отдельно от него. Необязательность
+        Элемент — необязательный компонент блока. Не у всех блоков должны быть
+        элементы.
+      </p>
+      <p>
+        Когда создавать блок, когда — элемент? Создавайте блок, если фрагмент
+        кода может использоваться повторно и не зависит от реализации других
+        компонентов страницы.
+      </p>
+      <p>
+        Создавайте элемент, если фрагмент кода не может использоваться
+        самостоятельно, без родительской сущности (блока). Исключение составляют
+        элементы, реализация которых для упрощения разработки требует разделения
+        на более мелкие части — подэлементы.В БЭМ-методологии нельзя создавать
+        элементы элементов. В подобном случае вместо элемента необходимо
+        создавать служебный блок.
+      </p>
+      <p>
+        Модификатор Cущность, определяющая внешний вид, состояние или поведение
+        блока либо элемента. Особенности: Название модификатора характеризует
+        внешний вид («какой размер?», «какая тема?» и т. п. — «размер»: size_s,
+        «тема»: theme_islands), состояние («чем отличается от прочих?» —
+        «отключен»: disabled, «фокусированный»: focused) и поведение («как ведет
+        себя?», «как взаимодействует с пользователем?» — «направление»:
+        directions_left-top). Имя модификатора отделяется от имени блока или
+        элемента одним подчеркиванием (_). Модификатор нельзя использовать
+        самостоятельно
+      </p>
+      <p>
+        Типы модификаторов Булевый Используют, когда важно только наличие или
+        отсутствие модификатора, а его значение несущественно. Например,
+        «отключен»: disabled. Считается, что при наличии булевого модификатора у
+        сущности его значение равно true. Структура полного имени модификатора
+        соответствует схеме:имя-блока_имя-модификатора;
+        имя-блока__имя-элемента_имя-модификатора. Пример:
+      </p>
+    </div>
+
+    <div class="wrap">
+      <h2>
+        <i>Проба работы с позиционированием: position: relative / position: sticky</i>
+      </h2>
+      <header>
+        <nav class="block-menu block-menu_color block-menu_brd">
+          <ul class="menu-ul">
+            <li class="menu-ul__item1 menu-ul__item_color">Home</li>
+            <li class="menu-ul__item2">Contact</li>
+            <li class="menu-ul__item3">About</li>
+            <li class="menu-ul__item4">Pege1</li>
+            <li class="menu-ul__item5">Pege2</li>
+          </ul>
+        </nav>
+      </header>
+
+      <article class="article">
+        <div class="article__head article__head_col-grey">
+          <h3>Статья номер 1</h3>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa laborum
+          modi, veritatis voluptatum ipsum non veniam possimus quasi asperiores
+          quam?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum iure
+          iste soluta est non ea ex cum repudiandae vel nulla!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+          excepturi quia quo, consectetur itaque numquam repellendus quaerat
+          accusantium qui temporibus?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          assumenda consequatur facilis qui laborum voluptate atque praesentium
+          cumque ab odio.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          assumenda consequatur facilis qui laborum voluptate atque praesentium
+          cumque ab odio.
+        </p>
+      </article>
+      <main>
+        <section_1>
+          <div class="article__head article__head_col-red">
+            <h3>Статья номер 2</h3>
+          </div>
+          <p>
+            FFF Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil
+            nobis repellendus incidunt quas dolore perspiciatis fuga rem,
+            voluptates esse harum iure animi adipisci eaque doloribus expedita
+            aut in totam, asperiores tempora facilis ea sunt culpa non? Dolor
+            repellat nemo ducimus iure esse molestias, dolore aliquid veritatis.
+            Odio explicabo totam porro?
+          </p>
+        </section_1>
+        <section_2>
+          <div class="article__head article__head_col-green">
+            <h3>Статья номер 3</h3>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, est
+            asperiores laborum sequi provident sed culpa deleniti. Nobis iusto
+            impedit sint quasi nesciunt, maxime possimus rerum illum accusamus
+            nemo consequatur architecto placeat id porro dolorem veritatis quos.
+            Itaque ratione nihil assumenda nam eum molestiae reprehenderit,
+            quidem dicta incidunt, harum ab.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, est
+            asperiores laborum sequi provident sed culpa deleniti. Nobis iusto
+            impedit sint quasi nesciunt, maxime possimus rerum illum accusamus
+            nemo consequatur architecto placeat id porro dolorem veritatis quos.
+            Itaque ratione nihil assumenda nam eum molestiae reprehenderit,
+            quidem dicta incidunt, harum ab.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, est
+            asperiores laborum sequi provident sed culpa deleniti. Nobis iusto
+            impedit sint quasi nesciunt, maxime possimus rerum illum accusamus
+            nemo consequatur architecto placeat id porro dolorem veritatis quos.
+            Itaque ratione nihil assumenda nam eum molestiae reprehenderit,
+            quidem dicta incidunt, harum ab.
+          </p>
+        </section_2>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  padding: 20px 100px;
+}
+.p {
+  width: 200px;
+  height: 150px;
+  overflow: auto;
+  background: #777;
+}
+.pMax {
+  max-width: 200px;
+  max-height: 150px;
+  background: #777;
+  display: inline-block;
+}
+.pCombi {
+  margin: 0 auto;
+  max-width: 600px;
+  max-height: 150px;
+  background: #777;
+  display: block;
+  /* width: 100%; */
+  overflow: auto;
+}
+.pMin {
+  min-width: 200px;
+  min-height: 150px;
+  background: #a57373;
+}
+.pMin_Max {
+  min-width: 200px;
+  max-width: 400px;
+  min-height: 150px;
+  max-height: 300px;
+  background: #305f5b;
+  display: block;
+  /* display: inline-block; */
+  overflow: auto;
+}
+/* Практика позицианирование элем position: sticky; */
+@supports (position: sticky){
+  .child{
+    position: sticky;
+    top: 0;
+  }
+}
+.parent {
+  background-color: #71c1d9;
+  padding: 10px;
+  position: relative;  
+  height: 200vw;   
+}
+.child {  
+  position: sticky;
+  top: 0;
+}
+.child-one {
+  background-color: #e93e3e;
+}
+.child-two{
+  background-color: #188d8f;
+}
+.child-three{
+  background-color: #18a813;
+}
+
+/* Проба работы с БЭМ */
+/* обертка */
+.wrap{
+  padding: 30px 50px;
+  background-color: #aeadad;
+  position: relative;
+  min-height: 100vw;
+}
+/* оформление меню */
+.block-menu_color{
+  background-color: #11f1cf;
+}
+.block-menu_brd{
+  border: 1px solid #f60505;
+  border-radius: 5px;
+}
+.menu-ul{
+  display: flex;
+  justify-content: center;
+}
+nav>ul>li{
+  list-style: none;
+  margin-right: 10px;
+}
+/* Оформление заголовка статей и позиц. */
+.article__head{
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  position: sticky;
+  top: 0px;
+}
+.article__head_col-red{
+  background-color: #f87979;
+  border: 2px solid #743939;
+}
+.article__head_col-grey{
+  background-color: #848383;
+  border: 2px solid #3f3f3f;
+}
+.article__head_col-green{
+  background-color: rgb(73, 150, 73);
+  border: 2px solid #013207;
+}
+.article__head>h3{
+  margin: 0;
+}
